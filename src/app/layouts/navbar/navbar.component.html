@@ -1,19 +1,19 @@
-<div class="flex flex-row justify-around items-center font-bold">
-  <div class="self-end">
+<div class="flex flex-row justify-around items-center font-bold pt-10">
+  <div class="self-end ml-24">
     <a class="text-[#ff45d4]" href="#"><h1>Midwam</h1></a>
   </div>
-  <div  class="mt-5 flex flex-row justify-center items-center text-white">
+  <div  class="flex flex-row justify-center items-center text-white">
     <div class="flex flex-row justify-center items-center gap-20">
-    <a href="">Acceuil</a>
+    <a href="app-home">Acceuil</a>
     <a href="">A propos</a>
-    <a href="">Conseil</a>
-    <a href="">Sagesse</a>
+    <a href="app-language">Language</a>
+    <a href="app-contact">Contact</a>
     </div>
   </div>
-  <div class="mt-5 flex flex-row justify-center gap-5 items-center">
+  <div class="flex flex-row justify-center gap-5 items-center">
 
     
-    <a class="text-white" href="#" onclick="my_modal_2.showModal()"> Se connecter</a>
+    <a class="text-white" href="#" onclick="event.preventDefault(); my_modal_2.showModal()">Se connecter</a>
     
     <dialog id="my_modal_2" class="modal items-start">
       
@@ -47,7 +47,7 @@
     
 
 
-    <a class="text-[#ff4cd4]" href="#" onclick="my_modal_1.showModal()">S'abonner</a>
+    <a class="text-[#ff4cd4]" href="#" onclick="event.preventDefault(); my_modal_1.showModal()">S'abonner</a>
     
     <dialog id="my_modal_1" class="modal items-start">
       
