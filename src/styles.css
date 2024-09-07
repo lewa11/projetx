@@ -5,3 +5,152 @@
 html, body { height: 100%; }
 body { margin: 0; padding: 0; font-family: Mulish, sans-serif; }
 
+/* Masquer la barre de défilement pour les navigateurs WebKit (Chrome, Safari) */
+.scroll-container {
+    scrollbar-width: none; /* Masquer la barre de défilement sur Firefox */
+    -ms-overflow-style: none; /* Masquer la barre de défilement sur Internet Explorer 10+ */
+  }
+  
+  .scroll-container::-webkit-scrollbar {
+    display: none; /* Masquer la barre de défilement sur Chrome, Safari et Opera */
+  }
+  
+
+  
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  .textReveal-Animation {
+    animation: reveal 1.5s ease-in-out;
+  }
+  
+  .slideText-Animation {
+    animation: slide 0.5s ease-in-out forwards;
+  }
+  
+  .blinkColorSky-Animation {
+    animation: blinkColorSky 2s linear infinite alternate;
+  }
+  
+  .blink-Animation {
+    animation: blink 0.75s ease-in-out 2;
+  }
+  
+  .blinkInfinite-Animation {
+    animation: blink 2s ease-in-out infinite;
+  }
+  
+  .blinkInfiniteFast-Animation {
+    animation: blink 1s ease-in-out infinite;
+  }
+  
+  .disappear-Animation {
+    animation: disappear 1s linear;
+  }
+  
+  .bg-animation {
+    background: linear-gradient(-45deg, rgba(32, 35, 42, 0.8), rgb(40, 44, 52), rgba(50, 53, 60, 0.8), rgb(60, 64, 72));
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    @apply h-screen snap-start snap-always border-b-8 border-neutral-950 flex justify-center items-center;
+  }
+  /* .bg-animation2 {
+    background: radial-gradient(ellipse, rgba(32, 35, 42, 0.8), rgb(40, 44, 52));
+    background-size: 400% 400%;
+    animation: gradientAnimation2 10s ease infinite;
+    @apply h-screen snap-start snap-always border-b-8 border-neutral-950 flex justify-center items-center;
+  } */
+
+
+
+/* texte zoomout */
+  .text-container {
+    width: 100vw;
+    height: 100vh;
+    font-weight: bold;
+    font-size: 36px;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-container > div {
+    animation: come2life linear 10s infinite;
+    transform-origin: center center;
+    opacity: 0;
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.text-container > div:nth-child(1) {
+    left: 30vw;
+    top: 30vh;
+    animation-delay: 0s;
+}
+
+.text-container > div:nth-child(2) {
+    left: 70vw;
+    top: 30vh;
+    animation-delay: 4s;
+}
+
+.text-container > div:nth-child(3) {
+    left: 50vw;
+    top: 50vh;
+    animation-delay: 8s;
+}
+
+.text-container > div:nth-child(4) {
+    left: 30vw;
+    top: 70vh;
+    animation-delay: 6s;
+}
+
+.text-container > div:nth-child(5) {
+    left: 70vw;
+    top: 70vh;
+    animation-delay: 2s;
+}
+
+@keyframes come2life {
+    0% {
+        transform: scale3d(0,0,1) rotate(0.02deg);
+        opacity: 0;
+        filter: blur(10px);
+    }
+    25% {
+        transform: scale3d(1,1,1) rotate(0.02deg);
+        opacity: 1;
+        filter: blur(0px);
+    }
+    40% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+
+    80% {
+      opacity: 0;
+    }
+  
+    100% {
+        transform: scale3d(4,4,1) rotate(0.02deg);
+        filter: blur(10px);
+    }
+}
+/* -------------- */
+/* lettre qui bouge  */
+.russo-one-regular {
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

@@ -1,9 +1,7 @@
-
-<app-navbar></app-navbar>
-<div class="h-screen flex flex-col justify-between items-center">
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<!-- Conteneur principal avec scroll snap et barre de défilement masquée -->
+<div
+  class="scroll-container flex flex-col min-h-screen h-full"
+  style="overflow-y: auto; height: 100vh; scroll-snap-type: y mandatory">
+  <app-navbar></app-navbar>
+  <router-outlet></router-outlet>
 </div>
-
-
-
